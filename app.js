@@ -1,44 +1,3 @@
-const welcome = () => {
-    const $welcomh1 = $('<h1>').text('Welcome').css('text-align', 'center')
-    $welcomh1.appendTo('body')
-    const $welp = $('<p>').text('My name is Adam Abdi and this is my portfolio').css('text-align', 'center')
-    $welp.appendTo('body')
-}
-
-const aboutMe = () => {
-    const $link = $('<a>').attr('href', 'aboutMe.html').text('About Me').addClass('about')
-    const $abouth1 = $('<h1>').text('About Me')
-    $abouth1.appendTo('body') 
-    const $aboutp = $('<p>').text('I am Adam Abdi, and I am looking for a job in the Software Engineering field, I have been intrested in coding since I was young.  I am currently enrolled in a coding bootcamp to evolve my skills as a programmer.  I am a team player, dedicated and open-minded.  After I gradute from this bootcamp I will have the necessary tool to excel inside of a work place.')
-    $aboutp.appendTo('body')
-    $link.appendTo('body')
-}
-
- 
-const resume = () => {
-    const $link2 = $('<a>').attr('href', 'resume.html').text('Resume').addClass('res')
-    const $resumeh1 = $('<h1>').text('ADAM ABDI').css('text-decoration', 'underline')
-    $link2.appendTo('body')
-    $resumeh1.appendTo('body')
-    const $resumep = $('<p>').text('12234 Parkview Lane, Burnsville, MN 55337 - newacc928@gmail.com - (763) 777 1403')
-    $resumep.appendTo('body')
-    const $resumeh3 = $('<h5>').text('SUMMARY')
-    const $resumeh32 = $('<h5>').text('PROFESSIONAL EXPERIENCE')
-    const $resumeh33 = $('<h5>').text('EDUCATION')
-    const $resumep5 = $('<p>').text('1+ year of Customer Service Experience')
-    const $resumep2 = $('<p>').text('Burnsville Highschool, Burnsville, MN')
-    const $resumep3 = $('<p>').text('Best Buy, Burnsville, MN September 2019-November 2020')
-    const $resumep4 = $('<p>').text('Asset Protection Associate')
-    $resumeh3.appendTo('body')
-    $resumep5.appendTo('body')
-    $resumeh32.appendTo('body')
-    $resumep3.appendTo('body')
-    $resumep4.appendTo('body')
-    $resumeh33.appendTo('body')
-    $resumep2.appendTo('body')
-    
-}
-
 const resume1 = () => {
     const $resumeh1 = $('<h1>').text('ADAM ABDI').css('text-decoration', 'underline').css('display', 'block').addClass('hov').addClass('color')
     $resumeh1.appendTo('#resume')
@@ -86,6 +45,19 @@ const aboutMe1 = () => {
     $abouth1.appendTo('#about') 
     const $aboutp = $('<p>').text('I am Adam Abdi, and I am looking for a job in the Software Engineering field, I have been intrested in coding since I was young.  I am currently enrolled in a coding bootcamp to evolve my skills as a programmer.  I am a team player, dedicated and open-minded.  After I gradute from this bootcamp I will have the necessary tool to excel inside of a work place.')
     $aboutp.appendTo('#about')
+    const $form = $('<form>').attr('id', 'form')
+    $form.appendTo('#about')
+    const $label = $('<label>').text('What is your favorite fruit? ')
+    const $input = $('<input>')
+    $label.appendTo('#about')
+    $input.appendTo('#about')
+    const $input1 = $('<input>').attr('type', 'submit').attr('value', 'Submit').attr('id', 'sub')
+    $input1.appendTo('#about')
+}
+
+const myFav = () => {
+    const $formp = $('<p>').text('Well my favorite frute is pineapple!')
+    $formp.insertAfter('#sub')
 }
 
 const welcome1 = () => {
@@ -100,7 +72,6 @@ const welcome1 = () => {
 const changeColor = () => {
     color = ['red', 'blue', 'green', 'Aquamarine', 'BlueViolet', 'BurlyWood', 'DarkCyan', 'DarkGoldenRod', 'Pink']
     $('.color').css('color', color[Math.floor(Math.random() * color.length)])
-    console.log(color.length);
 }
 
 const links = () => {
@@ -108,21 +79,17 @@ const links = () => {
     $divlink.appendTo('body')
     const $link = $('<a>').attr('href', 'aboutMe.html').text('About Me').addClass('about')
     const $link2 = $('<a>').attr('href', 'resume.html').text('Resume').addClass('res')
-    // const $link3
+    const $link3 = $('<a>').attr('href', 'index.html').text('Home').addClass('wel')
+    $link3.appendTo($divlink)
     $link.appendTo($divlink)
     $link2.appendTo($divlink)
 }
 
 $(() =>{
-
-    $('#1').on('click', welcome)
-    $('#2').on('click', aboutMe)
-    $('#3').on('click', resume)
-    $('.about').on('click', aboutMe)
-    $('res').on('click', resume)
     resume1()
     aboutMe1()
     welcome1()
     $('#4').on('click', changeColor)
     links()
+    $('#sub').on('click', myFav)
 })
