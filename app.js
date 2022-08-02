@@ -86,7 +86,7 @@ const welcome1 = () => {
     $welh1.appendTo($div)
     const $welp2 = $('<p>').text('My name is Adam Abdi and this is my portfolio').css({'position': 'absolute', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)', 'margin': '30px', 'width': '400px'})
     $welp2.appendTo($div)
-    $('body').css('max-width', '100%')
+    $('body').css({'max-width': '100%', 'max-height': '100%'})
 }
 
 const changeColor = () => {
@@ -100,9 +100,13 @@ const links = () => {
     const $link = $('<a>').attr('href', 'aboutMe.html').text('About Me').addClass('about')
     const $link2 = $('<a>').attr('href', 'resume.html').text('Resume').addClass('res')
     const $link3 = $('<a>').attr('href', 'index.html').text('Home').addClass('wel')
+    const $link4 = $('<a>').attr('href', 'https://github.com/AdamAbdi1').text('GitHub')
+    const $link5 = $('<a>').attr('href', 'https://www.linkedin.com/in/adam-abdi-3675271b7/').text('Linkedin')
     $link3.appendTo($divlink)
     $link.appendTo($divlink)
     $link2.appendTo($divlink)
+    $link4.appendTo($divlink)
+    $link5.appendTo($divlink)
 }
 
 $(() =>{
@@ -112,6 +116,6 @@ $(() =>{
     $('#4').on('click', changeColor)
     links()
     $('#sub').on('click', myFav)
-    // const $meta = $('<meta>').attr('name','viewport').attr('content', 'width=device-width').attr('initial-scale', '1')
-    // $meta.appendTo('head')
+    const $meta = $('<meta>').attr('name','viewport').attr('content', 'width=device-width').attr('initial-scale', '1')
+    $meta.appendTo('head')
 })
