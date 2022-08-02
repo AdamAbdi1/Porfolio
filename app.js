@@ -85,9 +85,11 @@ const welcome1 = () => {
     const $welh1 = $('<h1>').text('Welcome').addClass('color').css('text-align', 'center')
     $welh1.appendTo($div)
     const $welp2 = $('<p>').text('My name is Adam Abdi and this is my portfolio').css('text-align', 'center')
-    $welp2.appendTo('body')
+    $welp2.appendTo('#wel')
     $('body').css({'max-width': '100%', 'max-height': '100%'})
     $('#wel').css('background-color', 'Beige')
+    const $img = $('<img>').attr('src', 'https://www.freepnglogos.com/uploads/mountain-png/mountain-png-transparent-mountain-images-pluspng-29.png').css({'height': '400'})
+    $img.appendTo('#wel')
 }
 
 const changeColor = () => {
