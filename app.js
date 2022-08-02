@@ -46,7 +46,7 @@ const resume1 = () => {
     }, function(){
         $('.hide5').css('display', 'none')
     })
-    $('#resume').css('background-color', 'DarkSalmon')
+    $('#resume').css({'background-color': 'DarkSalmon', 'border': '10px solid transparent', 'padding': '15px', 'border-image': 'url(https://www.freepnglogos.com/uploads/design-png/design-decorative-border-png-transparent-images-png-only-26.png) 30 stretch'})
     
 }
 
@@ -73,7 +73,7 @@ const aboutMe1 = () => {
     const $divimg = $('<div>').addClass('row')
     const $div2 = $('<div>').addClass('column')
     const $div3 = $('<div>').addClass('column')
-    const $img2 = $('<img>').attr('src', 'https://www.freepnglogos.com/uploads/rain-png/rain-with-cloud-image-download-15.png').css({'height': '100%', 'width': '100%'})
+    const $img2 = $('<img>').attr('src', 'https://www.freepnglogos.com/uploads/whale-png/whale-animal-fact-sheets-2.png').css({'height': '100%', 'width': '100%'})
     const $img3 = $('<img>').attr('src', 'https://www.clipartmax.com/png/middle/13-131571_all-interesting-and-special-facts-about-magento-themes-did-you-know-png.png')
     // $divimg.appendTo('#about')
     // $div2.appendTo($divimg)
