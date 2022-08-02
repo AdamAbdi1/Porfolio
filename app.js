@@ -88,7 +88,7 @@ const welcome1 = () => {
     $welp2.appendTo('#wel')
     $('body').css({'max-width': '100%', 'max-height': '100%'})
     $('#wel').css('background-color', 'Beige')
-    const $img = $('<img>').attr('src', 'https://www.freepnglogos.com/uploads/mountain-png/mountain-png-transparent-mountain-images-pluspng-29.png').css({'height': '400'})
+    const $img = $('<img>').attr('src', 'https://www.freepnglogos.com/uploads/mountain-png/mountain-png-transparent-mountain-images-pluspng-29.png').css({'height': '100%', 'width': '100%'})
     $img.appendTo('#wel')
 }
 
