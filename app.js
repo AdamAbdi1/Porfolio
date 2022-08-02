@@ -70,7 +70,18 @@ const aboutMe1 = () => {
     $input1.appendTo('#about')
     // const $formp = $('<p>').text(`Well my favorite fruit is ${$val}!`).attr('id', 'ee')
     // $formp.insertAfter('#sub')
-    
+    const $divimg = $('<div>').addClass('row')
+    const $div2 = $('<div>').addClass('column')
+    const $div3 = $('<div>').addClass('column')
+    const $img2 = $('<img>').attr('src', 'https://www.freepnglogos.com/uploads/rain-png/rain-with-cloud-image-download-15.png').css({'height': '100%', 'width': '100%'})
+    const $img3 = $('<img>').attr('src', 'https://www.clipartmax.com/png/middle/13-131571_all-interesting-and-special-facts-about-magento-themes-did-you-know-png.png')
+    // $divimg.appendTo('#about')
+    // $div2.appendTo($divimg)
+    // $div3.appendTo($divimg)
+    $img2.appendTo('#about')
+    // $img3.appendTo('#about')
+    // $('.column').css({'float': 'left', 'width': '50%', 'padding': '5px'})
+    // $('.row').css({'content': '""', 'clear': 'both', 'display': 'table'})
 }
 
 const myFav = () => {
