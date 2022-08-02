@@ -80,12 +80,12 @@ const myFav = () => {
 }
 
 const welcome1 = () => {
-    const $div = $('<div>').css({'position': 'relative', 'height': '400px', 'width': '1264px'})
+    const $div = $('<div>').css({'height': '100%', 'width': '100%', 'display': 'flex', 'postion': 'fixed', 'align-items': 'center', 'justify-content': 'center'})
     $div.appendTo('#wel')
-    const $welh1 = $('<h1>').text('Welcome').css({'position': 'absolute', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)', 'margin': '0'}).addClass('color')
+    const $welh1 = $('<h1>').text('Welcome').addClass('color').css('text-align', 'center')
     $welh1.appendTo($div)
-    const $welp2 = $('<p>').text('My name is Adam Abdi and this is my portfolio').css({'position': 'absolute', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)', 'margin': '30px', 'width': '400px'})
-    $welp2.appendTo($div)
+    const $welp2 = $('<p>').text('My name is Adam Abdi and this is my portfolio').css('text-align', 'center')
+    $welp2.appendTo('body')
     $('body').css({'max-width': '100%', 'max-height': '100%'})
     $('#wel').css('background-color', 'Beige')
 }
